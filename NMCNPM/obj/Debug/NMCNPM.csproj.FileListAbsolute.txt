@@ -1,0 +1,30 @@
+C:\Users\Nguyen\Desktop\NMCNPM\NMCNPM\bin\Debug\NMCNPM.exe.config
+C:\Users\Nguyen\Desktop\NMCNPM\NMCNPM\bin\Debug\NMCNPM.exe
+C:\Users\Nguyen\Desktop\NMCNPM\NMCNPM\bin\Debug\NMCNPM.pdb
+C:\Users\Nguyen\Desktop\NMCNPM\NMCNPM\obj\Debug\NMCNPM.csprojResolveAssemblyReference.cache
+C:\Users\Nguyen\Desktop\NMCNPM\NMCNPM\obj\Debug\NMCNPM.Properties.Resources.resources
+C:\Users\Nguyen\Desktop\NMCNPM\NMCNPM\obj\Debug\NMCNPM.csproj.GenerateResource.Cache
+C:\Users\Nguyen\Desktop\NMCNPM\NMCNPM\obj\Debug\NMCNPM.exe
+C:\Users\Nguyen\Desktop\NMCNPM\NMCNPM\obj\Debug\NMCNPM.pdb
+C:\Users\Nguyen\Desktop\NMCNPM\NMCNPM\obj\Debug\NMCNPM.frmAdmin.resources
+C:\Users\Nguyen\Desktop\NMCNPM\NMCNPM\obj\Debug\NMCNPM.frmLogin.resources
+C:\Users\Nguyen\Desktop\NMCNPM\NMCNPM\obj\Debug\NMCNPM.UserManagementControl.resources
+D:\Code\Git\NMCNPM\NMCNPM\bin\Debug\NMCNPM.exe.config
+D:\Code\Git\NMCNPM\NMCNPM\obj\Debug\NMCNPM.exe
+D:\Code\Git\NMCNPM\NMCNPM\obj\Debug\NMCNPM.pdb
+D:\Code\C#\SchoolManagement _ NMCNPM\NMCNPM\bin\Debug\NMCNPM.exe.config
+D:\Code\C#\SchoolManagement _ NMCNPM\NMCNPM\obj\Debug\NMCNPM.exe
+D:\Code\C#\SchoolManagement _ NMCNPM\NMCNPM\obj\Debug\NMCNPM.pdb
+D:\Code\C#\SchoolManagement\NMCNPM\bin\Debug\NMCNPM.exe.config
+D:\Code\C#\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.exe
+D:\Code\C#\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.pdb
+D:\Code\C#\SchoolManagement\NMCNPM\bin\Debug\NMCNPM.exe
+D:\Code\C#\SchoolManagement\NMCNPM\bin\Debug\NMCNPM.pdb
+D:\Code\C#\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.csprojResolveAssemblyReference.cache
+D:\Code\C#\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.frmAdmin.resources
+D:\Code\C#\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.frmLogin.resources
+D:\Code\C#\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.UserManagementControl.resources
+D:\Code\C#\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.Properties.Resources.resources
+D:\Code\C#\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.csproj.GenerateResource.Cache
+D:\Code\C#\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.StudentManagementControl.resources
+D:\Code\C#\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.TeacherManagementControl.resources

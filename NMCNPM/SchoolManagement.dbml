@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLDIEMNEW" Class="SchoolManagementDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=CHARLESNGUYEN;Initial Catalog=QLDIEMNEW;Integrated Security=True" SettingsObjectName="NMCNPM.Properties.Settings" SettingsPropertyName="QLDIEMNEWConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.GIAOVIEN" Member="GIAOVIENs">
+    <Type Name="GIAOVIEN">
+      <Column Name="magv" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tengv" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gt" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ngaysinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngayvaolam" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="mamh" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(11)" CanBeNull="true" />
+      <Column Name="hinhanh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="GIAOVIEN_LOP" Member="LOPs" ThisKey="magv" OtherKey="magv" Type="LOP" />
+      <Association Name="GIAOVIEN_PHANCONG" Member="PHANCONGs" ThisKey="magv" OtherKey="magv" Type="PHANCONG" />
+      <Association Name="MONHOC_GIAOVIEN" Member="MONHOC" ThisKey="mamh" OtherKey="mamh" Type="MONHOC" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOCSINH" Member="HOCSINHs">
+    <Type Name="HOCSINH">
+      <Column Name="mahs" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenhs" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gt" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ngaysinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tencha" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenme" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(11)" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hinhanh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="HOCSINH_DIEM" Member="DIEMs" ThisKey="mahs" OtherKey="mahs" Type="DIEM" />
+      <Association Name="HOCSINH_PHANLOP" Member="PHANLOPs" ThisKey="mahs" OtherKey="mahs" Type="PHANLOP" />
+      <Association Name="HOCSINH_KQHKMONHOC" Member="KQHKMONHOCs" ThisKey="mahs" OtherKey="mahs" Type="KQHKMONHOC" />
+      <Association Name="HOCSINH_KQHKTONGHOP" Member="KQHKTONGHOPs" ThisKey="mahs" OtherKey="mahs" Type="KQHKTONGHOP" />
+      <Association Name="HOCSINH_KQNHTONGHOP" Member="KQNHTONGHOPs" ThisKey="mahs" OtherKey="mahs" Type="KQNHTONGHOP" />
+      <Association Name="HOCSINH_KQNHMONHOC" Member="KQNHMONHOCs" ThisKey="mahs" OtherKey="mahs" Type="KQNHMONHOC" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOAINGUOIDUNG" Member="LOAINGUOIDUNGs">
+    <Type Name="LOAINGUOIDUNG">
+      <Column Name="maloai" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenloai" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="LOAINGUOIDUNG_TAIKHOAN" Member="TAIKHOANs" ThisKey="maloai" OtherKey="maloai" Type="TAIKHOAN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TAIKHOAN" Member="TAIKHOANs">
+    <Type Name="TAIKHOAN">
+      <Column Name="username" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="maloai" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="pass" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="LOAINGUOIDUNG_TAIKHOAN" Member="LOAINGUOIDUNG" ThisKey="maloai" OtherKey="maloai" Type="LOAINGUOIDUNG" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HANHKIEM" Member="HANHKIEMs">
+    <Type Name="HANHKIEM">
+      <Column Name="mahanhkiem" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenhanhkiem" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="HANHKIEM_KQHKTONGHOP" Member="KQHKTONGHOPs" ThisKey="mahanhkiem" OtherKey="mahanhkiem" Type="KQHKTONGHOP" />
+      <Association Name="HANHKIEM_KQNHTONGHOP" Member="KQNHTONGHOPs" ThisKey="mahanhkiem" OtherKey="mahanhkiem" Type="KQNHTONGHOP" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOCKY" Member="HOCKies">
+    <Type Name="HOCKY">
+      <Column Name="mahk" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenhk" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="heso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="HOCKY_PHANCONG" Member="PHANCONGs" ThisKey="mahk" OtherKey="mahk" Type="PHANCONG" />
+      <Association Name="HOCKY_DIEM" Member="DIEMs" ThisKey="mahk" OtherKey="mahk" Type="DIEM" />
+      <Association Name="HOCKY_KQHKMONHOC" Member="KQHKMONHOCs" ThisKey="mahk" OtherKey="mahk" Type="KQHKMONHOC" />
+      <Association Name="HOCKY_KQHKTONGHOP" Member="KQHKTONGHOPs" ThisKey="mahk" OtherKey="mahk" Type="KQHKTONGHOP" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOCLUC" Member="HOCLUCs">
+    <Type Name="HOCLUC">
+      <Column Name="mahl" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenhl" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="diemcanduoi" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="diemcantren" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KETQUA" Member="KETQUAs">
+    <Type Name="KETQUA">
+      <Column Name="makq" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenkq" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="KETQUA_KQHKTONGHOP" Member="KQHKTONGHOPs" ThisKey="makq" OtherKey="makq" Type="KQHKTONGHOP" />
+      <Association Name="KETQUA_KQNHTONGHOP" Member="KQNHTONGHOPs" ThisKey="makq" OtherKey="makq" Type="KQNHTONGHOP" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KHOILOP" Member="KHOILOPs">
+    <Type Name="KHOILOP">
+      <Column Name="makl" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenkl" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Association Name="KHOILOP_LOP" Member="LOPs" ThisKey="makl" OtherKey="makl" Type="LOP" />
+      <Association Name="KHOILOP_PHANCONG" Member="PHANCONGs" ThisKey="makl" OtherKey="makl" Type="PHANCONG" />
+      <Association Name="KHOILOP_DIEM" Member="DIEMs" ThisKey="makl" OtherKey="makl" Type="DIEM" />
+      <Association Name="KHOILOP_PHANLOP" Member="PHANLOPs" ThisKey="makl" OtherKey="makl" Type="PHANLOP" />
+      <Association Name="KHOILOP_KQHKMONHOC" Member="KQHKMONHOCs" ThisKey="makl" OtherKey="makl" Type="KQHKMONHOC" />
+      <Association Name="KHOILOP_KQHKTONGHOP" Member="KQHKTONGHOPs" ThisKey="makl" OtherKey="makl" Type="KQHKTONGHOP" />
+      <Association Name="KHOILOP_KQNHTONGHOP" Member="KQNHTONGHOPs" ThisKey="makl" OtherKey="makl" Type="KQNHTONGHOP" />
+      <Association Name="KHOILOP_KQNHMONHOC" Member="KQNHMONHOCs" ThisKey="makl" OtherKey="makl" Type="KQNHMONHOC" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOP" Member="LOPs">
+    <Type Name="LOP">
+      <Column Name="malop" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenlop" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="makl" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="manh" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="siso" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="magv" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Association Name="LOP_PHANCONG" Member="PHANCONGs" ThisKey="malop" OtherKey="malop" Type="PHANCONG" />
+      <Association Name="LOP_DIEM" Member="DIEMs" ThisKey="malop" OtherKey="malop" Type="DIEM" />
+      <Association Name="LOP_PHANLOP" Member="PHANLOPs" ThisKey="malop" OtherKey="malop" Type="PHANLOP" />
+      <Association Name="LOP_KQHKMONHOC" Member="KQHKMONHOCs" ThisKey="malop" OtherKey="malop" Type="KQHKMONHOC" />
+      <Association Name="LOP_KQHKTONGHOP" Member="KQHKTONGHOPs" ThisKey="malop" OtherKey="malop" Type="KQHKTONGHOP" />
+      <Association Name="LOP_KQNHTONGHOP" Member="KQNHTONGHOPs" ThisKey="malop" OtherKey="malop" Type="KQNHTONGHOP" />
+      <Association Name="LOP_KQNHMONHOC" Member="KQNHMONHOCs" ThisKey="malop" OtherKey="malop" Type="KQNHMONHOC" />
+      <Association Name="GIAOVIEN_LOP" Member="GIAOVIEN" ThisKey="magv" OtherKey="magv" Type="GIAOVIEN" IsForeignKey="true" />
+      <Association Name="KHOILOP_LOP" Member="KHOILOP" ThisKey="makl" OtherKey="makl" Type="KHOILOP" IsForeignKey="true" />
+      <Association Name="NAMHOC_LOP" Member="NAMHOC" ThisKey="manh" OtherKey="manh" Type="NAMHOC" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MONHOC" Member="MONHOCs">
+    <Type Name="MONHOC">
+      <Column Name="mamh" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenmh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sotiet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="heso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="MONHOC_GIAOVIEN" Member="GIAOVIENs" ThisKey="mamh" OtherKey="mamh" Type="GIAOVIEN" />
+      <Association Name="MONHOC_PHANCONG" Member="PHANCONGs" ThisKey="mamh" OtherKey="mamh" Type="PHANCONG" />
+      <Association Name="MONHOC_DIEM" Member="DIEMs" ThisKey="mamh" OtherKey="mamh" Type="DIEM" />
+      <Association Name="MONHOC_KQHKMONHOC" Member="KQHKMONHOCs" ThisKey="mamh" OtherKey="mamh" Type="KQHKMONHOC" />
+      <Association Name="MONHOC_KQNHMONHOC" Member="KQNHMONHOCs" ThisKey="mamh" OtherKey="mamh" Type="KQNHMONHOC" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NAMHOC" Member="NAMHOCs">
+    <Type Name="NAMHOC">
+      <Column Name="manh" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tennh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="NAMHOC_LOP" Member="LOPs" ThisKey="manh" OtherKey="manh" Type="LOP" />
+      <Association Name="NAMHOC_PHANCONG" Member="PHANCONGs" ThisKey="manh" OtherKey="manh" Type="PHANCONG" />
+      <Association Name="NAMHOC_DIEM" Member="DIEMs" ThisKey="manh" OtherKey="manh" Type="DIEM" />
+      <Association Name="NAMHOC_PHANLOP" Member="PHANLOPs" ThisKey="manh" OtherKey="manh" Type="PHANLOP" />
+      <Association Name="NAMHOC_KQHKMONHOC" Member="KQHKMONHOCs" ThisKey="manh" OtherKey="manh" Type="KQHKMONHOC" />
+      <Association Name="NAMHOC_KQHKTONGHOP" Member="KQHKTONGHOPs" ThisKey="manh" OtherKey="manh" Type="KQHKTONGHOP" />
+      <Association Name="NAMHOC_KQNHTONGHOP" Member="KQNHTONGHOPs" ThisKey="manh" OtherKey="manh" Type="KQNHTONGHOP" />
+      <Association Name="NAMHOC_KQNHMONHOC" Member="KQNHMONHOCs" ThisKey="manh" OtherKey="manh" Type="KQNHMONHOC" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PHANCONG" Member="PHANCONGs">
+    <Type Name="PHANCONG">
+      <Column Name="mapc" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="malop" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="mamh" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="magv" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="mahk" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="makl" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="manh" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Association Name="GIAOVIEN_PHANCONG" Member="GIAOVIEN" ThisKey="magv" OtherKey="magv" Type="GIAOVIEN" IsForeignKey="true" />
+      <Association Name="LOP_PHANCONG" Member="LOP" ThisKey="malop" OtherKey="malop" Type="LOP" IsForeignKey="true" />
+      <Association Name="MONHOC_PHANCONG" Member="MONHOC" ThisKey="mamh" OtherKey="mamh" Type="MONHOC" IsForeignKey="true" />
+      <Association Name="HOCKY_PHANCONG" Member="HOCKY" ThisKey="mahk" OtherKey="mahk" Type="HOCKY" IsForeignKey="true" />
+      <Association Name="KHOILOP_PHANCONG" Member="KHOILOP" ThisKey="makl" OtherKey="makl" Type="KHOILOP" IsForeignKey="true" />
+      <Association Name="NAMHOC_PHANCONG" Member="NAMHOC" ThisKey="manh" OtherKey="manh" Type="NAMHOC" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DIEM" Member="DIEMs">
+    <Type Name="DIEM">
+      <Column Name="mahs" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="mamh" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="manh" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="mahk" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="malop" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="mieng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="mlp1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="mlp2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="mlp3" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="blp1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="blp2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="blp3" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="thi" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="makl" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="HOCKY_DIEM" Member="HOCKY" ThisKey="mahk" OtherKey="mahk" Type="HOCKY" IsForeignKey="true" />
+      <Association Name="HOCSINH_DIEM" Member="HOCSINH" ThisKey="mahs" OtherKey="mahs" Type="HOCSINH" IsForeignKey="true" />
+      <Association Name="LOP_DIEM" Member="LOP" ThisKey="malop" OtherKey="malop" Type="LOP" IsForeignKey="true" />
+      <Association Name="MONHOC_DIEM" Member="MONHOC" ThisKey="mamh" OtherKey="mamh" Type="MONHOC" IsForeignKey="true" />
+      <Association Name="NAMHOC_DIEM" Member="NAMHOC" ThisKey="manh" OtherKey="manh" Type="NAMHOC" IsForeignKey="true" />
+      <Association Name="KHOILOP_DIEM" Member="KHOILOP" ThisKey="makl" OtherKey="makl" Type="KHOILOP" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PHANLOP" Member="PHANLOPs">
+    <Type Name="PHANLOP">
+      <Column Name="manh" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="makl" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="malop" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="mahs" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="HOCSINH_PHANLOP" Member="HOCSINH" ThisKey="mahs" OtherKey="mahs" Type="HOCSINH" IsForeignKey="true" />
+      <Association Name="KHOILOP_PHANLOP" Member="KHOILOP" ThisKey="makl" OtherKey="makl" Type="KHOILOP" IsForeignKey="true" />
+      <Association Name="LOP_PHANLOP" Member="LOP" ThisKey="malop" OtherKey="malop" Type="LOP" IsForeignKey="true" />
+      <Association Name="NAMHOC_PHANLOP" Member="NAMHOC" ThisKey="manh" OtherKey="manh" Type="NAMHOC" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KQHKMONHOC" Member="KQHKMONHOCs">
+    <Type Name="KQHKMONHOC">
+      <Column Name="mahs" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="malop" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="mamh" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="mahk" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="manh" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="diemTBKT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="diemTBmh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="makl" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="LOP_KQHKMONHOC" Member="LOP" ThisKey="malop" OtherKey="malop" Type="LOP" IsForeignKey="true" />
+      <Association Name="HOCKY_KQHKMONHOC" Member="HOCKY" ThisKey="mahk" OtherKey="mahk" Type="HOCKY" IsForeignKey="true" />
+      <Association Name="HOCSINH_KQHKMONHOC" Member="HOCSINH" ThisKey="mahs" OtherKey="mahs" Type="HOCSINH" IsForeignKey="true" />
+      <Association Name="MONHOC_KQHKMONHOC" Member="MONHOC" ThisKey="mamh" OtherKey="mamh" Type="MONHOC" IsForeignKey="true" />
+      <Association Name="NAMHOC_KQHKMONHOC" Member="NAMHOC" ThisKey="manh" OtherKey="manh" Type="NAMHOC" IsForeignKey="true" />
+      <Association Name="KHOILOP_KQHKMONHOC" Member="KHOILOP" ThisKey="makl" OtherKey="makl" Type="KHOILOP" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KQHKTONGHOP" Member="KQHKTONGHOPs">
+    <Type Name="KQHKTONGHOP">
+      <Column Name="mahs" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="malop" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="mahk" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="manh" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="mahanhkiem" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="diemTBMHHK" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="makl" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="hocluc" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="makq" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="HANHKIEM_KQHKTONGHOP" Member="HANHKIEM" ThisKey="mahanhkiem" OtherKey="mahanhkiem" Type="HANHKIEM" IsForeignKey="true" />
+      <Association Name="LOP_KQHKTONGHOP" Member="LOP" ThisKey="malop" OtherKey="malop" Type="LOP" IsForeignKey="true" />
+      <Association Name="HOCKY_KQHKTONGHOP" Member="HOCKY" ThisKey="mahk" OtherKey="mahk" Type="HOCKY" IsForeignKey="true" />
+      <Association Name="HOCSINH_KQHKTONGHOP" Member="HOCSINH" ThisKey="mahs" OtherKey="mahs" Type="HOCSINH" IsForeignKey="true" />
+      <Association Name="NAMHOC_KQHKTONGHOP" Member="NAMHOC" ThisKey="manh" OtherKey="manh" Type="NAMHOC" IsForeignKey="true" />
+      <Association Name="KHOILOP_KQHKTONGHOP" Member="KHOILOP" ThisKey="makl" OtherKey="makl" Type="KHOILOP" IsForeignKey="true" />
+      <Association Name="KETQUA_KQHKTONGHOP" Member="KETQUA" ThisKey="makq" OtherKey="makq" Type="KETQUA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KQNHTONGHOP" Member="KQNHTONGHOPs">
+    <Type Name="KQNHTONGHOP">
+      <Column Name="mahs" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="malop" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="manh" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="mahanhkiem" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="diemTBNH" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="makq" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="makl" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="hocluc" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="HANHKIEM_KQNHTONGHOP" Member="HANHKIEM" ThisKey="mahanhkiem" OtherKey="mahanhkiem" Type="HANHKIEM" IsForeignKey="true" />
+      <Association Name="LOP_KQNHTONGHOP" Member="LOP" ThisKey="malop" OtherKey="malop" Type="LOP" IsForeignKey="true" />
+      <Association Name="HOCSINH_KQNHTONGHOP" Member="HOCSINH" ThisKey="mahs" OtherKey="mahs" Type="HOCSINH" IsForeignKey="true" />
+      <Association Name="KETQUA_KQNHTONGHOP" Member="KETQUA" ThisKey="makq" OtherKey="makq" Type="KETQUA" IsForeignKey="true" />
+      <Association Name="NAMHOC_KQNHTONGHOP" Member="NAMHOC" ThisKey="manh" OtherKey="manh" Type="NAMHOC" IsForeignKey="true" />
+      <Association Name="KHOILOP_KQNHTONGHOP" Member="KHOILOP" ThisKey="makl" OtherKey="makl" Type="KHOILOP" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KQNHMONHOC" Member="KQNHMONHOCs">
+    <Type Name="KQNHMONHOC">
+      <Column Name="mahs" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="malop" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="mamh" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="manh" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="diemTBNH" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="makl" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="LOP_KQNHMONHOC" Member="LOP" ThisKey="malop" OtherKey="malop" Type="LOP" IsForeignKey="true" />
+      <Association Name="HOCSINH_KQNHMONHOC" Member="HOCSINH" ThisKey="mahs" OtherKey="mahs" Type="HOCSINH" IsForeignKey="true" />
+      <Association Name="MONHOC_KQNHMONHOC" Member="MONHOC" ThisKey="mamh" OtherKey="mamh" Type="MONHOC" IsForeignKey="true" />
+      <Association Name="NAMHOC_KQNHMONHOC" Member="NAMHOC" ThisKey="manh" OtherKey="manh" Type="NAMHOC" IsForeignKey="true" />
+      <Association Name="KHOILOP_KQNHMONHOC" Member="KHOILOP" ThisKey="makl" OtherKey="makl" Type="KHOILOP" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
