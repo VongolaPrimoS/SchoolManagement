@@ -32,7 +32,7 @@ namespace NMCNPM
             var Query = from User in frmLogin._database.GetTable<TAIKHOAN>()
                         from TypeUser in frmLogin._database.GetTable<LOAINGUOIDUNG>()
                         where User.maloai == TypeUser.maloai
-                        select new User { IUserName = User.username, IPassword = User.pass, IMaLoai = TypeUser.tenloai };
+                        select new User { UserName = User.username, Password = User.pass, MaLoai = TypeUser.tenloai };
             dGVUser.DataSource = Query;
 
 
@@ -61,13 +61,14 @@ namespace NMCNPM
 
         private void dGVUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            txtPassword.Clear();
             txtUser.Text = dGVUser.Rows[e.RowIndex].Cells[1].Value.ToString();
-           /// if (dGVUser.Rows[e.RowIndex].Cells[2].)
-            //{
+            if (dGVUser.Rows[e.RowIndex].Cells[2].Value!=null)
+            {
+                txtPassword.Tag = txtPassword.Text;
                 txtPassword.Text = dGVUser.Rows[e.RowIndex].Cells[2].Value.ToString();
-            //}
+            }
             
-            txtPassword.Tag = txtPassword.Text;
         }
 
         private void btnSave_Click(object sender, EventArgs e)

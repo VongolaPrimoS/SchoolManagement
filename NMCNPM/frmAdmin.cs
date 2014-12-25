@@ -50,5 +50,10 @@ namespace NMCNPM
             panel2.Controls.Clear();
             panel2.Controls.Add(_teacherManagementControl);
         }
+
+        private void btnClass_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

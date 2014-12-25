@@ -29,16 +29,18 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnUserManagement = new System.Windows.Forms.Button();
-            this.btnStudentManagement = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnTeacherManagement = new System.Windows.Forms.Button();
+            this.btnStudentManagement = new System.Windows.Forms.Button();
+            this.btnUserManagement = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnClass = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.btnClass);
             this.panel1.Controls.Add(this.btnTeacherManagement);
             this.panel1.Controls.Add(this.btnStudentManagement);
             this.panel1.Controls.Add(this.btnUserManagement);
@@ -48,15 +50,15 @@
             this.panel1.Size = new System.Drawing.Size(1260, 56);
             this.panel1.TabIndex = 0;
             // 
-            // btnUserManagement
+            // btnTeacherManagement
             // 
-            this.btnUserManagement.Location = new System.Drawing.Point(1069, 12);
-            this.btnUserManagement.Name = "btnUserManagement";
-            this.btnUserManagement.Size = new System.Drawing.Size(123, 33);
-            this.btnUserManagement.TabIndex = 0;
-            this.btnUserManagement.Text = "Quản Lý User";
-            this.btnUserManagement.UseVisualStyleBackColor = true;
-            this.btnUserManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
+            this.btnTeacherManagement.Location = new System.Drawing.Point(767, 12);
+            this.btnTeacherManagement.Name = "btnTeacherManagement";
+            this.btnTeacherManagement.Size = new System.Drawing.Size(123, 33);
+            this.btnTeacherManagement.TabIndex = 0;
+            this.btnTeacherManagement.Text = "Quản Lý Giáo Viên";
+            this.btnTeacherManagement.UseVisualStyleBackColor = true;
+            this.btnTeacherManagement.Click += new System.EventHandler(this.btnTeacherManagement_Click);
             // 
             // btnStudentManagement
             // 
@@ -68,6 +70,16 @@
             this.btnStudentManagement.UseVisualStyleBackColor = true;
             this.btnStudentManagement.Click += new System.EventHandler(this.btnStudentManagement_Click);
             // 
+            // btnUserManagement
+            // 
+            this.btnUserManagement.Location = new System.Drawing.Point(1069, 12);
+            this.btnUserManagement.Name = "btnUserManagement";
+            this.btnUserManagement.Size = new System.Drawing.Size(123, 33);
+            this.btnUserManagement.TabIndex = 0;
+            this.btnUserManagement.Text = "Quản Lý User";
+            this.btnUserManagement.UseVisualStyleBackColor = true;
+            this.btnUserManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
+            // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -76,15 +88,15 @@
             this.panel2.Size = new System.Drawing.Size(1260, 605);
             this.panel2.TabIndex = 1;
             // 
-            // btnTeacherManagement
+            // btnClass
             // 
-            this.btnTeacherManagement.Location = new System.Drawing.Point(767, 12);
-            this.btnTeacherManagement.Name = "btnTeacherManagement";
-            this.btnTeacherManagement.Size = new System.Drawing.Size(123, 33);
-            this.btnTeacherManagement.TabIndex = 0;
-            this.btnTeacherManagement.Text = "Quản Lý Giáo Viên";
-            this.btnTeacherManagement.UseVisualStyleBackColor = true;
-            this.btnTeacherManagement.Click += new System.EventHandler(this.btnTeacherManagement_Click);
+            this.btnClass.Location = new System.Drawing.Point(615, 12);
+            this.btnClass.Name = "btnClass";
+            this.btnClass.Size = new System.Drawing.Size(123, 33);
+            this.btnClass.TabIndex = 0;
+            this.btnClass.Text = "Quản Lý Lớp";
+            this.btnClass.UseVisualStyleBackColor = true;
+            this.btnClass.Click += new System.EventHandler(this.btnClass_Click);
             // 
             // frmAdmin
             // 
@@ -109,5 +121,6 @@
         private System.Windows.Forms.Button btnStudentManagement;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnTeacherManagement;
+        private System.Windows.Forms.Button btnClass;
     }
 }

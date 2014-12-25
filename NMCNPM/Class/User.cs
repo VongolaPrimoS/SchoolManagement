@@ -10,14 +10,14 @@ namespace NMCNPM.Class
     {
         private String _iUserName;
 
-        public String IUserName
+        public String UserName
         {
             get { return _iUserName; }
             set { _iUserName = value; }
         }
         private String _iPassword;
 
-        public String IPassword
+        public String Password
         {
             get { return _iPassword; }
             set 
@@ -34,7 +34,7 @@ namespace NMCNPM.Class
         }
         private String _iMaLoai;
 
-        public String IMaLoai
+        public String MaLoai
         {
             get { return _iMaLoai; }
             set { _iMaLoai = value; }

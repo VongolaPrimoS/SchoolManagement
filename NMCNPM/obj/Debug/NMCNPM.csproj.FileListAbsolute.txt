@@ -28,3 +28,16 @@ D:\Code\C#\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.Properties.Resources.resourc
 D:\Code\C#\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.csproj.GenerateResource.Cache
 D:\Code\C#\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.StudentManagementControl.resources
 D:\Code\C#\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.TeacherManagementControl.resources
+D:\Code\Git\SchoolManagement\NMCNPM\bin\Debug\NMCNPM.exe.config
+D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.exe
+D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.pdb
+D:\Code\Git\SchoolManagement\NMCNPM\bin\Debug\NMCNPM.exe
+D:\Code\Git\SchoolManagement\NMCNPM\bin\Debug\NMCNPM.pdb
+D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.csprojResolveAssemblyReference.cache
+D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.frmAdmin.resources
+D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.frmLogin.resources
+D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.StudentManagementControl.resources
+D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.TeacherManagementControl.resources
+D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.UserManagementControl.resources
+D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.Properties.Resources.resources
+D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.csproj.GenerateResource.Cache
