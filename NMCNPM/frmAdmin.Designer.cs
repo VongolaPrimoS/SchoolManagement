@@ -35,6 +35,7 @@
             this.btnStudentManagement = new System.Windows.Forms.Button();
             this.btnUserManagement = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,6 +44,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.btnTerm);
             this.panel1.Controls.Add(this.btnClass);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnTeacherManagement);
             this.panel1.Controls.Add(this.btnStudentManagement);
             this.panel1.Controls.Add(this.btnUserManagement);
@@ -64,7 +66,7 @@
             // 
             // btnClass
             // 
-            this.btnClass.Location = new System.Drawing.Point(437, 12);
+            this.btnClass.Location = new System.Drawing.Point(289, 12);
             this.btnClass.Name = "btnClass";
             this.btnClass.Size = new System.Drawing.Size(123, 33);
             this.btnClass.TabIndex = 0;
@@ -74,17 +76,17 @@
             // 
             // btnTeacherManagement
             // 
-            this.btnTeacherManagement.Location = new System.Drawing.Point(1114, 12);
+            this.btnTeacherManagement.Location = new System.Drawing.Point(967, 12);
             this.btnTeacherManagement.Name = "btnTeacherManagement";
             this.btnTeacherManagement.Size = new System.Drawing.Size(123, 33);
             this.btnTeacherManagement.TabIndex = 0;
-            this.btnTeacherManagement.Text = "Quản Lý Giáo Viên";
+            this.btnTeacherManagement.Text = "Phân công giảng dạy";
             this.btnTeacherManagement.UseVisualStyleBackColor = true;
-            this.btnTeacherManagement.Click += new System.EventHandler(this.btnTeacherManagement_Click);
+            this.btnTeacherManagement.Click += new System.EventHandler(this.btnTeacherSchedule_Click);
             // 
             // btnStudentManagement
             // 
-            this.btnStudentManagement.Location = new System.Drawing.Point(291, 12);
+            this.btnStudentManagement.Location = new System.Drawing.Point(428, 12);
             this.btnStudentManagement.Name = "btnStudentManagement";
             this.btnStudentManagement.Size = new System.Drawing.Size(123, 33);
             this.btnStudentManagement.TabIndex = 0;
@@ -109,6 +111,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1260, 605);
             this.panel2.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1096, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 33);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Quản Lý Giáo Viên";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnTeacherManagement_Click);
             // 
             // frmAdmin
             // 
@@ -135,5 +147,6 @@
         private System.Windows.Forms.Button btnTeacherManagement;
         private System.Windows.Forms.Button btnClass;
         private System.Windows.Forms.Button btnTerm;
+        private System.Windows.Forms.Button button1;
     }
 }

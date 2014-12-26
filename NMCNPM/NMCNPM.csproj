@@ -51,6 +51,7 @@
     <Compile Include="ClassManagementControl.Designer.cs">
       <DependentUpon>ClassManagementControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class\ClassRoom.cs" />
     <Compile Include="Class\Student.cs" />
     <Compile Include="Class\Term.cs" />
     <Compile Include="Class\User.cs" />
@@ -83,6 +84,12 @@
     <Compile Include="TeacherManagementControl.Designer.cs">
       <DependentUpon>TeacherManagementControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="TeacherScheduleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TeacherScheduleControl.designer.cs">
+      <DependentUpon>TeacherScheduleControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="TermManagementControls.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TeacherManagementControl.resx">
       <DependentUpon>TeacherManagementControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherScheduleControl.resx">
+      <DependentUpon>TeacherScheduleControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TermManagementControls.resx">
       <DependentUpon>TermManagementControls.cs</DependentUpon>
