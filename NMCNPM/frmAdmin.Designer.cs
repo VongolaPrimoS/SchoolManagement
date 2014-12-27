@@ -31,11 +31,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnTerm = new System.Windows.Forms.Button();
             this.btnClass = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnTeacherManagement = new System.Windows.Forms.Button();
             this.btnStudentManagement = new System.Windows.Forms.Button();
             this.btnUserManagement = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,13 +66,23 @@
             // 
             // btnClass
             // 
-            this.btnClass.Location = new System.Drawing.Point(289, 12);
+            this.btnClass.Location = new System.Drawing.Point(288, 12);
             this.btnClass.Name = "btnClass";
             this.btnClass.Size = new System.Drawing.Size(123, 33);
             this.btnClass.TabIndex = 0;
             this.btnClass.Text = "Quản Lý Lớp";
             this.btnClass.UseVisualStyleBackColor = true;
             this.btnClass.Click += new System.EventHandler(this.btnClass_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1096, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 33);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Quản Lý Giáo Viên";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnTeacherManagement_Click);
             // 
             // btnTeacherManagement
             // 
@@ -86,7 +96,7 @@
             // 
             // btnStudentManagement
             // 
-            this.btnStudentManagement.Location = new System.Drawing.Point(428, 12);
+            this.btnStudentManagement.Location = new System.Drawing.Point(426, 12);
             this.btnStudentManagement.Name = "btnStudentManagement";
             this.btnStudentManagement.Size = new System.Drawing.Size(123, 33);
             this.btnStudentManagement.TabIndex = 0;
@@ -111,16 +121,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1260, 605);
             this.panel2.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1096, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 33);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Quản Lý Giáo Viên";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnTeacherManagement_Click);
             // 
             // frmAdmin
             // 

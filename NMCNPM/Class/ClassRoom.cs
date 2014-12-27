@@ -29,6 +29,13 @@ namespace NMCNPM.Class
             set { _grade = value; }
         }
 
+        private String _term;
+        public String Term
+        {
+            get { return _term; }
+            set { _term = value; }
+        }
+
         private String _sum;
         public String Sum
         {
