@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace NMCNPM
 {
@@ -16,19 +17,11 @@ namespace NMCNPM
         Dictionary<string, string> bomon_dict = new Dictionary<string, string>();
         string selected_mgv = "";
         int GVtable_selected_index = -1;
+        // use for calling utility functions
+        Utils utils = new Utils();
         public TeacherManagementControl()
         {
             InitializeComponent();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void TeacherManagementControl_Load(object sender, EventArgs e)
@@ -104,6 +97,11 @@ namespace NMCNPM
         {
             if (ho_ten.Text != "" && dia_chi.Text != "" && so_dien_thoai.Text != "" && hinh_anh.Text != "")
             {
+                if (!utils.validate_PhoneNumberInput(so_dien_thoai.Text))
+                {
+                    MessageBox.Show("So dien thoai khong hop le!");
+                    return;
+                }
                 GIAOVIEN gv = new GIAOVIEN();
                 gv.tengv = ho_ten.Text;
                 gv.sdt = so_dien_thoai.Text;
@@ -128,7 +126,7 @@ namespace NMCNPM
                     var binary = new System.Data.Linq.Binary(ms.GetBuffer());
                     gv.hinhanh = binary;
                 }
-                gv.magv = generateMGV(GVtable.Rows.Count);
+                gv.magv = utils.generatePrimaryKey("GV",GVtable.Rows.Count);
 
                 // begin insert record
                 frmLogin._database.GIAOVIENs.InsertOnSubmit(gv);
@@ -149,32 +147,6 @@ namespace NMCNPM
                 //error
                 MessageBox.Show("Mot so truong de trong, hay nhap vao!");
             }
-        }
-
-        private string generateMGV(int rows)
-        {
-            string msgv = "GV";
-            int temp = rows;
-            int count = 0;
-
-            if (rows > 9999)
-            {
-                return "-1";
-            }
-
-            // get length of number
-            while (temp > 0)
-            {
-                count++;
-                temp /= 10;
-            }
-            //padding zero
-            for (int i = 0; i < (4 - count); i++)
-            {
-                msgv += "0";
-            }
-            msgv += rows.ToString();
-            return msgv;
         }
 
         private void xoa_Click(object sender, EventArgs e)
