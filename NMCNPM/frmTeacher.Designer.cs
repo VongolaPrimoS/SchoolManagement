@@ -46,7 +46,7 @@
             // 
             // btnPoint
             // 
-            this.btnPoint.Location = new System.Drawing.Point(490, 12);
+            this.btnPoint.Location = new System.Drawing.Point(556, 12);
             this.btnPoint.Name = "btnPoint";
             this.btnPoint.Size = new System.Drawing.Size(134, 31);
             this.btnPoint.TabIndex = 0;

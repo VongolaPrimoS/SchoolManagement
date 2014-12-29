@@ -57,7 +57,7 @@ namespace NMCNPM
                             }
                             else
                             {
-                                frmStudent _frmStudent = new frmStudent();
+                                frmStudent _frmStudent = new frmStudent(txtUser.Text);
                                 _frmStudent.OnFormCloseEventArg += new frmStudent.FormCloseHandler(ShowHiddenForm);
                                 _frmStudent.Show();
                             }

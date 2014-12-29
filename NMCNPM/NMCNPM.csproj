@@ -52,6 +52,7 @@
       <DependentUpon>ClassManagementControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\ClassRoom.cs" />
+    <Compile Include="Class\Point.cs" />
     <Compile Include="Class\Student.cs" />
     <Compile Include="Class\Term.cs" />
     <Compile Include="Class\User.cs" />

@@ -16,10 +16,10 @@ namespace NMCNPM
         public event FormCloseHandler OnFormCloseEventArg;
 
         public static StudyResultControl _studyResultControl;
-        public frmStudent()
+        public frmStudent(String IDStudent)
         {
             InitializeComponent();
-            _studyResultControl = new StudyResultControl();
+            _studyResultControl = new StudyResultControl(IDStudent);
             _studyResultControl.Location = new Point((panel2.Width + _studyResultControl.Width) / 2 - _studyResultControl.Width, (panel2.Height + _studyResultControl.Height) / 2 - _studyResultControl.Height);
         }
 
