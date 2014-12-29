@@ -72,9 +72,9 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(112, 413);
+            this.btnSave.Location = new System.Drawing.Point(116, 371);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(82, 32);
+            this.btnSave.Size = new System.Drawing.Size(94, 50);
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -83,9 +83,9 @@
             // btnCancel
             // 
             this.btnCancel.Enabled = false;
-            this.btnCancel.Location = new System.Drawing.Point(28, 451);
+            this.btnCancel.Location = new System.Drawing.Point(12, 425);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(78, 32);
+            this.btnCancel.Size = new System.Drawing.Size(94, 50);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -94,7 +94,7 @@
             // btnTestID
             // 
             this.btnTestID.Enabled = false;
-            this.btnTestID.Location = new System.Drawing.Point(154, 43);
+            this.btnTestID.Location = new System.Drawing.Point(154, 26);
             this.btnTestID.Name = "btnTestID";
             this.btnTestID.Size = new System.Drawing.Size(56, 20);
             this.btnTestID.TabIndex = 1;
@@ -104,9 +104,9 @@
             // 
             // btnNewStudent
             // 
-            this.btnNewStudent.Location = new System.Drawing.Point(28, 413);
+            this.btnNewStudent.Location = new System.Drawing.Point(12, 371);
             this.btnNewStudent.Name = "btnNewStudent";
-            this.btnNewStudent.Size = new System.Drawing.Size(78, 32);
+            this.btnNewStudent.Size = new System.Drawing.Size(94, 50);
             this.btnNewStudent.TabIndex = 1;
             this.btnNewStudent.Text = "New";
             this.btnNewStudent.UseVisualStyleBackColor = true;
@@ -114,9 +114,9 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(112, 451);
+            this.btnDelete.Location = new System.Drawing.Point(116, 425);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(82, 32);
+            this.btnDelete.Size = new System.Drawing.Size(94, 50);
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -125,7 +125,7 @@
             // txtIDStudent
             // 
             this.txtIDStudent.Enabled = false;
-            this.txtIDStudent.Location = new System.Drawing.Point(12, 43);
+            this.txtIDStudent.Location = new System.Drawing.Point(12, 26);
             this.txtIDStudent.Name = "txtIDStudent";
             this.txtIDStudent.Size = new System.Drawing.Size(136, 20);
             this.txtIDStudent.TabIndex = 2;
@@ -133,15 +133,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 27);
+            this.label1.Location = new System.Drawing.Point(3, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "ID Student";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(12, 86);
+            this.txtFullName.Location = new System.Drawing.Point(12, 69);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(198, 20);
             this.txtFullName.TabIndex = 2;
@@ -149,33 +150,36 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 70);
+            this.label2.Location = new System.Drawing.Point(3, 53);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Full Name";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 156);
+            this.label3.Location = new System.Drawing.Point(3, 139);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Date of birth";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 204);
+            this.label4.Location = new System.Drawing.Point(3, 182);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Father Name";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtFatherName
             // 
-            this.txtFatherName.Location = new System.Drawing.Point(12, 220);
+            this.txtFatherName.Location = new System.Drawing.Point(12, 199);
             this.txtFatherName.Name = "txtFatherName";
             this.txtFatherName.Size = new System.Drawing.Size(198, 20);
             this.txtFatherName.TabIndex = 2;
@@ -183,15 +187,16 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 248);
+            this.label5.Location = new System.Drawing.Point(3, 225);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 13);
             this.label5.TabIndex = 3;
             this.label5.Text = "Mother Name";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtMotherName
             // 
-            this.txtMotherName.Location = new System.Drawing.Point(12, 264);
+            this.txtMotherName.Location = new System.Drawing.Point(12, 242);
             this.txtMotherName.Name = "txtMotherName";
             this.txtMotherName.Size = new System.Drawing.Size(198, 20);
             this.txtMotherName.TabIndex = 2;
@@ -199,15 +204,16 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 109);
+            this.label6.Location = new System.Drawing.Point(3, 96);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(25, 13);
             this.label6.TabIndex = 3;
             this.label6.Text = "Sex";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(12, 307);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(12, 285);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(198, 20);
             this.txtPhoneNumber.TabIndex = 2;
@@ -215,11 +221,12 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 291);
+            this.label7.Location = new System.Drawing.Point(3, 268);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 13);
             this.label7.TabIndex = 3;
             this.label7.Text = "Phone Number";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txtSex
             // 
@@ -227,21 +234,21 @@
             this.txtSex.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.txtSex.Location = new System.Drawing.Point(12, 125);
+            this.txtSex.Location = new System.Drawing.Point(12, 112);
             this.txtSex.Name = "txtSex";
             this.txtSex.Size = new System.Drawing.Size(198, 21);
             this.txtSex.TabIndex = 4;
             // 
             // dtpDOB
             // 
-            this.dtpDOB.Location = new System.Drawing.Point(12, 172);
+            this.dtpDOB.Location = new System.Drawing.Point(12, 156);
             this.dtpDOB.Name = "dtpDOB";
             this.dtpDOB.Size = new System.Drawing.Size(200, 20);
             this.dtpDOB.TabIndex = 5;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(12, 349);
+            this.txtAddress.Location = new System.Drawing.Point(12, 328);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(198, 20);
             this.txtAddress.TabIndex = 2;
@@ -249,17 +256,18 @@
             // lb
             // 
             this.lb.AutoSize = true;
-            this.lb.Location = new System.Drawing.Point(3, 333);
+            this.lb.Location = new System.Drawing.Point(3, 311);
             this.lb.Name = "lb";
             this.lb.Size = new System.Drawing.Size(45, 13);
             this.lb.TabIndex = 3;
             this.lb.Text = "Address";
+            this.lb.Click += new System.EventHandler(this.lb_Click);
             // 
             // StudentManagementControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Controls.Add(this.dtpDOB);
             this.Controls.Add(this.txtSex);
             this.Controls.Add(this.lb);
