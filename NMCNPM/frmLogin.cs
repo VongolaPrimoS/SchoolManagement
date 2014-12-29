@@ -13,7 +13,7 @@ namespace NMCNPM
     public partial class frmLogin : Form
     {
         public static SchoolManagementDataContext _database;
-        String _strConnectionString = "Data Source=CHARLESNGUYEN;Initial Catalog=QLDIEMNEW;Integrated Security=True";
+        String _strConnectionString = "Data Source=MON;Initial Catalog=QLDIEMNEW;Integrated Security=True";
 
         public frmLogin()
         {
