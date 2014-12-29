@@ -51,6 +51,7 @@
     <Compile Include="ClassManagementControl.Designer.cs">
       <DependentUpon>ClassManagementControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class\ClassRoom.cs" />
     <Compile Include="Class\Student.cs" />
     <Compile Include="Class\Term.cs" />
     <Compile Include="Class\User.cs" />
@@ -66,6 +67,30 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudent.Designer.cs">
+      <DependentUpon>frmStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeacher.Designer.cs">
+      <DependentUpon>frmTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupStudentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GroupStudentControl.Designer.cs">
+      <DependentUpon>GroupStudentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointManagementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PointManagementControl.Designer.cs">
+      <DependentUpon>PointManagementControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="SchoolManagement.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -77,11 +102,23 @@
     <Compile Include="StudentManagementControl.Designer.cs">
       <DependentUpon>StudentManagementControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudyResultControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudyResultControl.Designer.cs">
+      <DependentUpon>StudyResultControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeacherManagementControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="TeacherManagementControl.Designer.cs">
       <DependentUpon>TeacherManagementControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherScheduleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TeacherScheduleControl.designer.cs">
+      <DependentUpon>TeacherScheduleControl.cs</DependentUpon>
     </Compile>
     <Compile Include="TermManagementControls.cs">
       <SubType>UserControl</SubType>
@@ -109,11 +146,29 @@
     <None Include="SchoolManagement.dbml.layout">
       <DependentUpon>SchoolManagement.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="frmStudent.resx">
+      <DependentUpon>frmStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeacher.resx">
+      <DependentUpon>frmTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupStudentControl.resx">
+      <DependentUpon>GroupStudentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointManagementControl.resx">
+      <DependentUpon>PointManagementControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentManagementControl.resx">
       <DependentUpon>StudentManagementControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StudyResultControl.resx">
+      <DependentUpon>StudyResultControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TeacherManagementControl.resx">
       <DependentUpon>TeacherManagementControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherScheduleControl.resx">
+      <DependentUpon>TeacherScheduleControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TermManagementControls.resx">
       <DependentUpon>TermManagementControls.cs</DependentUpon>

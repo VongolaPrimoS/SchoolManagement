@@ -41,9 +41,27 @@ namespace NMCNPM
                 {
                     if (txtUser.Text==item.username && txtPassword.Text==item.pass)
                     {
-                        frmAdmin _frmAdmin = new frmAdmin();
-                        _frmAdmin.OnFormCloseEventArg += new frmAdmin.FormCloseHandler(ShowHiddenForm);
-                        _frmAdmin.Show();
+                        if (txtUser.Text=="admin")
+                        {
+                            frmAdmin _frmAdmin = new frmAdmin();
+                            _frmAdmin.OnFormCloseEventArg += new frmAdmin.FormCloseHandler(ShowHiddenForm);
+                            _frmAdmin.Show();
+                        }
+                        else
+                        {
+                            if (txtUser.Text.Substring(0,2)=="GV")
+                            {
+                                frmTeacher _frmTeacher = new frmTeacher();
+                                _frmTeacher.OnFormCloseEventArg += new frmTeacher.FormCloseHandler(ShowHiddenForm);
+                                _frmTeacher.Show();
+                            }
+                            else
+                            {
+                                frmStudent _frmStudent = new frmStudent();
+                                _frmStudent.OnFormCloseEventArg += new frmStudent.FormCloseHandler(ShowHiddenForm);
+                                _frmStudent.Show();
+                            }
+                        }
                         this.Hide();
                         return;
                     }
