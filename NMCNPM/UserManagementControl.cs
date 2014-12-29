@@ -32,7 +32,7 @@ namespace NMCNPM
             var Query = from User in frmLogin._database.GetTable<TAIKHOAN>()
                         from TypeUser in frmLogin._database.GetTable<LOAINGUOIDUNG>()
                         where User.maloai == TypeUser.maloai
-                        select new User { UserName = User.username, Password = User.pass, MaLoai = TypeUser.tenloai };
+                        select new User { UserName = User.username, Password = User.pass, MaLoai = TypeUser.tenloai, };
             dGVUser.DataSource = Query;
 
 

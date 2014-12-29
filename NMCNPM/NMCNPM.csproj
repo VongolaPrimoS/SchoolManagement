@@ -45,7 +45,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassManagementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClassManagementControl.Designer.cs">
+      <DependentUpon>ClassManagementControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class\Student.cs" />
+    <Compile Include="Class\Term.cs" />
     <Compile Include="Class\User.cs" />
     <Compile Include="frmAdmin.cs">
       <SubType>Form</SubType>
@@ -76,6 +83,12 @@
     <Compile Include="TeacherManagementControl.Designer.cs">
       <DependentUpon>TeacherManagementControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="TermManagementControls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TermManagementControls.Designer.cs">
+      <DependentUpon>TermManagementControls.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserManagementControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -84,6 +97,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ClassManagementControl.resx">
+      <DependentUpon>ClassManagementControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TeacherManagementControl.resx">
       <DependentUpon>TeacherManagementControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TermManagementControls.resx">
+      <DependentUpon>TermManagementControls.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserManagementControl.resx">
       <DependentUpon>UserManagementControl.cs</DependentUpon>
