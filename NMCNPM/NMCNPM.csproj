@@ -85,6 +85,12 @@
     <Compile Include="GroupStudentControl.Designer.cs">
       <DependentUpon>GroupStudentControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="PointManagementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PointManagementControl.Designer.cs">
+      <DependentUpon>PointManagementControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="SchoolManagement.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -95,6 +101,12 @@
     </Compile>
     <Compile Include="StudentManagementControl.Designer.cs">
       <DependentUpon>StudentManagementControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudyResultControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudyResultControl.Designer.cs">
+      <DependentUpon>StudyResultControl.cs</DependentUpon>
     </Compile>
     <Compile Include="TeacherManagementControl.cs">
       <SubType>UserControl</SubType>
@@ -143,8 +155,14 @@
     <EmbeddedResource Include="GroupStudentControl.resx">
       <DependentUpon>GroupStudentControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PointManagementControl.resx">
+      <DependentUpon>PointManagementControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentManagementControl.resx">
       <DependentUpon>StudentManagementControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudyResultControl.resx">
+      <DependentUpon>StudyResultControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeacherManagementControl.resx">
       <DependentUpon>TeacherManagementControl.cs</DependentUpon>

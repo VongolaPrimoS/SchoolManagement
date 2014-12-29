@@ -47,3 +47,5 @@ D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.TeacherScheduleControl.reso
 D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.GroupStudentControl.resources
 D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.frmStudent.resources
 D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.frmTeacher.resources
+D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.PointManagementControl.resources
+D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.StudyResultControl.resources
