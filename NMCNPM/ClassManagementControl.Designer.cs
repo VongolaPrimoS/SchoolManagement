@@ -57,18 +57,19 @@
             this.dgvClass.AllowUserToResizeRows = false;
             this.dgvClass.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClass.Location = new System.Drawing.Point(17, 24);
+            this.dgvClass.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dgvClass.Location = new System.Drawing.Point(0, 0);
             this.dgvClass.Name = "dgvClass";
             this.dgvClass.ReadOnly = true;
             this.dgvClass.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClass.Size = new System.Drawing.Size(821, 464);
+            this.dgvClass.Size = new System.Drawing.Size(821, 513);
             this.dgvClass.TabIndex = 0;
             this.dgvClass.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClass_CellClick);
             // 
             // txtIDClass
             // 
             this.txtIDClass.Enabled = false;
-            this.txtIDClass.Location = new System.Drawing.Point(922, 80);
+            this.txtIDClass.Location = new System.Drawing.Point(898, 3);
             this.txtIDClass.MaxLength = 4;
             this.txtIDClass.Name = "txtIDClass";
             this.txtIDClass.Size = new System.Drawing.Size(159, 20);
@@ -77,7 +78,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(861, 83);
+            this.label1.Location = new System.Drawing.Point(836, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 2;
@@ -85,7 +86,7 @@
             // 
             // txtNameClass
             // 
-            this.txtNameClass.Location = new System.Drawing.Point(922, 106);
+            this.txtNameClass.Location = new System.Drawing.Point(898, 42);
             this.txtNameClass.MaxLength = 30;
             this.txtNameClass.Name = "txtNameClass";
             this.txtNameClass.Size = new System.Drawing.Size(209, 20);
@@ -94,7 +95,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(860, 109);
+            this.label2.Location = new System.Drawing.Point(836, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 2;
@@ -103,7 +104,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(860, 188);
+            this.label3.Location = new System.Drawing.Point(836, 163);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 2;
@@ -111,7 +112,7 @@
             // 
             // txtSum
             // 
-            this.txtSum.Location = new System.Drawing.Point(922, 132);
+            this.txtSum.Location = new System.Drawing.Point(898, 81);
             this.txtSum.Name = "txtSum";
             this.txtSum.Size = new System.Drawing.Size(209, 20);
             this.txtSum.TabIndex = 1;
@@ -119,7 +120,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(860, 135);
+            this.label4.Location = new System.Drawing.Point(836, 84);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(28, 13);
             this.label4.TabIndex = 2;
@@ -128,7 +129,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(860, 161);
+            this.label5.Location = new System.Drawing.Point(836, 123);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 13);
             this.label5.TabIndex = 2;
@@ -137,7 +138,7 @@
             // btnTest
             // 
             this.btnTest.Enabled = false;
-            this.btnTest.Location = new System.Drawing.Point(1087, 78);
+            this.btnTest.Location = new System.Drawing.Point(1063, 1);
             this.btnTest.Name = "btnTest";
             this.btnTest.Size = new System.Drawing.Size(44, 23);
             this.btnTest.TabIndex = 3;
@@ -148,7 +149,7 @@
             // cbbGrade
             // 
             this.cbbGrade.FormattingEnabled = true;
-            this.cbbGrade.Location = new System.Drawing.Point(922, 185);
+            this.cbbGrade.Location = new System.Drawing.Point(898, 160);
             this.cbbGrade.Name = "cbbGrade";
             this.cbbGrade.Size = new System.Drawing.Size(209, 21);
             this.cbbGrade.TabIndex = 4;
@@ -157,7 +158,7 @@
             // cbbTeacher
             // 
             this.cbbTeacher.FormattingEnabled = true;
-            this.cbbTeacher.Location = new System.Drawing.Point(922, 158);
+            this.cbbTeacher.Location = new System.Drawing.Point(898, 120);
             this.cbbTeacher.Name = "cbbTeacher";
             this.cbbTeacher.Size = new System.Drawing.Size(209, 21);
             this.cbbTeacher.TabIndex = 5;
@@ -165,9 +166,9 @@
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(933, 261);
+            this.btnNew.Location = new System.Drawing.Point(898, 240);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(75, 23);
+            this.btnNew.Size = new System.Drawing.Size(99, 49);
             this.btnNew.TabIndex = 6;
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = true;
@@ -176,9 +177,9 @@
             // btnCancel
             // 
             this.btnCancel.Enabled = false;
-            this.btnCancel.Location = new System.Drawing.Point(1014, 261);
+            this.btnCancel.Location = new System.Drawing.Point(1008, 240);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(99, 49);
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -186,9 +187,9 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(933, 290);
+            this.btnSave.Location = new System.Drawing.Point(898, 300);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(99, 49);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -196,9 +197,9 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(1014, 290);
+            this.btnDelete.Location = new System.Drawing.Point(1008, 300);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.Size = new System.Drawing.Size(99, 49);
             this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -207,7 +208,7 @@
             // cbbTerm
             // 
             this.cbbTerm.FormattingEnabled = true;
-            this.cbbTerm.Location = new System.Drawing.Point(922, 212);
+            this.cbbTerm.Location = new System.Drawing.Point(898, 200);
             this.cbbTerm.Name = "cbbTerm";
             this.cbbTerm.Size = new System.Drawing.Size(209, 21);
             this.cbbTerm.TabIndex = 8;
@@ -215,7 +216,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(860, 215);
+            this.label6.Location = new System.Drawing.Point(836, 203);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 13);
             this.label6.TabIndex = 7;
@@ -245,7 +246,7 @@
             this.Controls.Add(this.txtIDClass);
             this.Controls.Add(this.dgvClass);
             this.Name = "ClassManagementControl";
-            this.Size = new System.Drawing.Size(1168, 513);
+            this.Size = new System.Drawing.Size(1118, 513);
             this.Load += new System.EventHandler(this.ClassManagementControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).EndInit();
             this.ResumeLayout(false);
