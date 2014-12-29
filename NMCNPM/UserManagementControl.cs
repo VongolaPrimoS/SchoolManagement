@@ -68,6 +68,10 @@ namespace NMCNPM
                 txtPassword.Tag = txtPassword.Text;
                 txtPassword.Text = dGVUser.Rows[e.RowIndex].Cells[2].Value.ToString();
             }
+            else
+            {
+                txtPassword.Tag = "";
+            }
             
         }
 
