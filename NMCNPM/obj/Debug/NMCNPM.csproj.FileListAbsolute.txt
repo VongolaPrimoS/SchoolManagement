@@ -44,3 +44,6 @@ D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.ClassManagementControl.reso
 D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.csprojResolveAssemblyReference.cache
 D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.TermManagementControls.resources
 D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.TeacherScheduleControl.resources
+D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.GroupStudentControl.resources
+D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.frmStudent.resources
+D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.frmTeacher.resources

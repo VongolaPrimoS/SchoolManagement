@@ -36,6 +36,7 @@
             this.btnStudentManagement = new System.Windows.Forms.Button();
             this.btnUserManagement = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnGroupStudent = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +47,7 @@
             this.panel1.Controls.Add(this.btnClass);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnTeacherManagement);
+            this.panel1.Controls.Add(this.btnGroupStudent);
             this.panel1.Controls.Add(this.btnStudentManagement);
             this.panel1.Controls.Add(this.btnUserManagement);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -100,7 +102,7 @@
             this.btnStudentManagement.Name = "btnStudentManagement";
             this.btnStudentManagement.Size = new System.Drawing.Size(123, 33);
             this.btnStudentManagement.TabIndex = 0;
-            this.btnStudentManagement.Text = "Quản Lý Sinh Viên";
+            this.btnStudentManagement.Text = "Quản Lý Học Sinh";
             this.btnStudentManagement.UseVisualStyleBackColor = true;
             this.btnStudentManagement.Click += new System.EventHandler(this.btnStudentManagement_Click);
             // 
@@ -121,6 +123,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1260, 605);
             this.panel2.TabIndex = 1;
+            // 
+            // btnGroupStudent
+            // 
+            this.btnGroupStudent.Location = new System.Drawing.Point(567, 12);
+            this.btnGroupStudent.Name = "btnGroupStudent";
+            this.btnGroupStudent.Size = new System.Drawing.Size(123, 33);
+            this.btnGroupStudent.TabIndex = 0;
+            this.btnGroupStudent.Text = "Phân Lớp Học Sinh";
+            this.btnGroupStudent.UseVisualStyleBackColor = true;
+            this.btnGroupStudent.Click += new System.EventHandler(this.btnGroupStudent_Click);
             // 
             // frmAdmin
             // 
@@ -148,5 +160,6 @@
         private System.Windows.Forms.Button btnClass;
         private System.Windows.Forms.Button btnTerm;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGroupStudent;
     }
 }

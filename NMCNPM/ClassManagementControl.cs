@@ -215,6 +215,7 @@ namespace NMCNPM
                     }
                 }
             }
+            frmAdmin._groupStudentControl.LoadData();
         }
 
         private void btnTest_Click(object sender, EventArgs e)

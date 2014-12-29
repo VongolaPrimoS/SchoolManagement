@@ -21,6 +21,7 @@ namespace NMCNPM
         public static ClassManagementControl _classManagementControl;
         public static TermManagementControls _termManagementControl;
         public static TeacherScheduleControl _teacherScheduleControl;
+        public static GroupStudentControl _groupStudentControl;
 
         public frmAdmin()
         {
@@ -32,6 +33,7 @@ namespace NMCNPM
             _classManagementControl = new ClassManagementControl();
             _termManagementControl = new TermManagementControls();
             _teacherScheduleControl = new TeacherScheduleControl();
+            _groupStudentControl = new GroupStudentControl();
 
             _userManagementControl.Location = new Point((panel2.Width + _userManagementControl.Width) / 2 - _userManagementControl.Width, (panel2.Height + _userManagementControl.Height) / 2 - _userManagementControl.Height);
             _studentManagementControl.Location = new Point((panel2.Width + _studentManagementControl.Width) / 2 - _studentManagementControl.Width, (panel2.Height + _studentManagementControl.Height) / 2 - _studentManagementControl.Height);
@@ -39,6 +41,7 @@ namespace NMCNPM
             _classManagementControl.Location = new Point((panel2.Width + _classManagementControl.Width) / 2 - _classManagementControl.Width, (panel2.Height + _classManagementControl.Height) / 2 - _classManagementControl.Height);
             _termManagementControl.Location = new Point((panel2.Width + _termManagementControl.Width) / 2 - _termManagementControl.Width, (panel2.Height + _termManagementControl.Height) / 2 - _termManagementControl.Height);
             _teacherScheduleControl.Location = new Point((panel2.Width + _teacherScheduleControl.Width) / 2 - _teacherScheduleControl.Width, (panel2.Height + _teacherScheduleControl.Height) / 2 - _teacherScheduleControl.Height);
+            _groupStudentControl.Location = new Point((panel2.Width + _groupStudentControl.Width) / 2 - _groupStudentControl.Width, (panel2.Height + _groupStudentControl.Height) / 2 - _groupStudentControl.Height);
         }
 
         private void frmAdmin_FormClosed(object sender, FormClosedEventArgs e)
@@ -80,6 +83,12 @@ namespace NMCNPM
         {
             panel2.Controls.Clear();
             panel2.Controls.Add(_teacherScheduleControl);
+        }
+
+        private void btnGroupStudent_Click(object sender, EventArgs e)
+        {
+            panel2.Controls.Clear();
+            panel2.Controls.Add(_groupStudentControl);
         }
     }
 }
