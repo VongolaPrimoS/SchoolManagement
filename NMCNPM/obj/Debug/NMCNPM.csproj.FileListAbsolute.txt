@@ -70,3 +70,4 @@ C:\Users\Tu\Desktop\CNPM\DA\SchoolManagement-master\NMCNPM\obj\Debug\NMCNPM.Term
 C:\Users\Tu\Desktop\CNPM\DA\SchoolManagement-master\NMCNPM\obj\Debug\NMCNPM.UserManagementControl.resources
 C:\Users\Tu\Desktop\CNPM\DA\SchoolManagement-master\NMCNPM\obj\Debug\NMCNPM.Properties.Resources.resources
 C:\Users\Tu\Desktop\CNPM\DA\SchoolManagement-master\NMCNPM\obj\Debug\NMCNPM.csproj.GenerateResource.Cache
+D:\Code\Git\SchoolManagement\NMCNPM\obj\Debug\NMCNPM.frmSetPoint.resources

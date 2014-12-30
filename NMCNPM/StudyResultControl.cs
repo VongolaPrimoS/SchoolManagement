@@ -48,12 +48,16 @@ namespace NMCNPM
 
         private void btnLook_Click(object sender, EventArgs e)
         {
-            var _getClass = from P in frmLogin._database.GetTable<DIEM>()
-                            join Q in frmLogin._database.GetTable<MONHOC>()
-                            on P.mamh equals Q.mamh 
-                            where P.mahs == _idStudent && P.malop == _idClass[cbbClass.SelectedIndex] && P.mahk == _idSemester[cbbHK.SelectedIndex]
-                            select new { Mon=Q.tenmh,PreTest=P.mlp1,MidTest=P.blp1,FinalTest=P.thi };
-            dgvPoint.DataSource = _getClass;
+            if (cbbClass.Text!="" && cbbHK.Text!="")
+            {
+                var _getClass = from P in frmLogin._database.GetTable<DIEM>()
+                                join Q in frmLogin._database.GetTable<MONHOC>()
+                                on P.mamh equals Q.mamh
+                                where P.mahs == _idStudent && P.malop == _idClass[cbbClass.SelectedIndex] && P.mahk == _idSemester[cbbHK.SelectedIndex]
+                                select new { Mon = Q.tenmh, PreTest = P.mlp1, MidTest = P.blp1, FinalTest = P.thi };
+                dgvPoint.DataSource = _getClass;
+            }
+            
         }
     }
 }

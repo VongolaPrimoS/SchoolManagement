@@ -52,7 +52,7 @@
       <DependentUpon>ClassManagementControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\ClassRoom.cs" />
-    <Compile Include="Class\Point.cs" />
+    <Compile Include="Class\iPoint.cs" />
     <Compile Include="Class\Student.cs" />
     <Compile Include="Class\Term.cs" />
     <Compile Include="Class\User.cs" />
@@ -67,6 +67,12 @@
     </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetPoint.Designer.cs">
+      <DependentUpon>frmSetPoint.cs</DependentUpon>
     </Compile>
     <Compile Include="frmStudent.cs">
       <SubType>Form</SubType>
@@ -97,6 +103,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SchoolManagement.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Class\Score.cs" />
     <Compile Include="StudentManagementControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -147,6 +154,9 @@
     <None Include="SchoolManagement.dbml.layout">
       <DependentUpon>SchoolManagement.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="frmSetPoint.resx">
+      <DependentUpon>frmSetPoint.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmStudent.resx">
       <DependentUpon>frmStudent.cs</DependentUpon>
     </EmbeddedResource>

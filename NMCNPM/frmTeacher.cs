@@ -16,10 +16,10 @@ namespace NMCNPM
         public event FormCloseHandler OnFormCloseEventArg;
 
         public static PointManagementControl _pointManagementControl; 
-        public frmTeacher()
+        public frmTeacher(String IDTeacher)
         {
             InitializeComponent();
-            _pointManagementControl = new PointManagementControl();
+            _pointManagementControl = new PointManagementControl(IDTeacher);
             _pointManagementControl.Location = new Point((panel2.Width + _pointManagementControl.Width) / 2 - _pointManagementControl.Width, (panel2.Height + _pointManagementControl.Height) / 2 - _pointManagementControl.Height);
 
         }
